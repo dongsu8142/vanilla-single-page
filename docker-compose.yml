@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    volumes:
+      - ./Nginx/logs:/var/log/nginx
+    ports:
+      - '80:80'
