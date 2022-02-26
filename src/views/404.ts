@@ -3,12 +3,10 @@ import AbstractView from "./AbstractView";
 export default class extends AbstractView {
   constructor() {
     super();
-    this.setTitle("Dashboard");
+    this.setTitle("404");
   }
 
   async getHtml() {
-    return `<div>
-    Dashboard Page
-    </div>`;
+    return `<h1>Page Not Found</h1>`;
   }
 }

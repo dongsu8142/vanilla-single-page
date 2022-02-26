@@ -1,7 +1,7 @@
 export default class {
-  public params: any;
-  constructor(params: any) {
-    this.params = params;
+  private _params: any;
+  constructor(params?: any) {
+    this._params = params;
   }
 
   setTitle(title: string) {
@@ -10,5 +10,9 @@ export default class {
 
   async getHtml() {
     return "";
+  }
+
+  get params() {
+    return this._params;
   }
 }

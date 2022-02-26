@@ -2,6 +2,7 @@ import "./style.css";
 import { Match, Route } from "./utils/type";
 import Index from "./views/index";
 import About from "./views/about";
+import NotFound from "./views/404";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 
@@ -28,6 +29,7 @@ const navigateTo = (url: string) => {
 
 const router = async () => {
   const routes: Route[] = [
+    { path: "404", view: NotFound },
     { path: "/", view: Index },
     { path: "/about/:id", view: About },
   ];
